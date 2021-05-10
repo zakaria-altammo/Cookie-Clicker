@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-size: 30px;
+    background: lightcyan;
+}
+#run {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: url("cookie-cute.png");
+    background-size: cover;
+    border: none;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #333;
+}
+#run1 {
+    width: 80px;
+    height: 30px;
+}
