@@ -21,7 +21,11 @@ h1 {
     transition: 0.3s;
     box-shadow: 0 0 20px #333;
 }
-#run1 {
+#multi-btn {
+    width: 80px;
+    height: 30px;
+}
+#auto-click {
     width: 80px;
     height: 30px;
 }
