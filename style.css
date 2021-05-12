@@ -9,16 +9,18 @@ body {
     font-family: Andalus, sans-serif;
     text-align: center;
     font-size: 30px;
-    background: url("space.jpg");
-    background-size: auto;
+    background: url("nathan.jpg");
+    background-size: cover;
 }
 
 #my-game {
     display: flex;
+    height: 580px;
 }
 .flex {
     width: 400px;
     box-shadow: 0 0 10px #333;
+    height: content-box;
 }
 #click-cookie {
     flex-grow: 1;

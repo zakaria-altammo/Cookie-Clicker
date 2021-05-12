@@ -29,7 +29,7 @@ button.addEventListener("click", () => {
 button1.addEventListener('click',  () => {
 
     if (count >= multipCost) {
-        increaseByOne += 1;
+        count += increaseByOne;
         count = count - multipCost;
         multipCost = multipCost * multiplier;
        multiplierCost.innerHTML = multipCost;
