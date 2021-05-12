@@ -4,28 +4,110 @@
     padding: 0;
 }
 body {
+    font-weight: bold;
+     color: peachpuff;
+    font-family: Andalus, sans-serif;
     text-align: center;
     font-size: 30px;
-    background: lightcyan;
+    background: url("space.jpg");
+    background-size: auto;
+}
+
+#my-game {
+    display: flex;
+}
+.flex {
+    width: 400px;
+    box-shadow: 0 0 10px #333;
+}
+#click-cookie {
+    flex-grow: 1;
+}
+label {
+    color: black;
 }
 h1 {
-    color: #333;
+    background: #333333;
+    margin-right: 120px;
+    margin-left: 120px;
+}
+#counter {
+    color: whitesmoke;
 }
 #run {
-    height: 300px;
-    width: 300px;
+    margin-top: 10px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
-    background: url("cookie-cute.png");
+    background: url("16.png");
     background-size: cover;
     border: none;
-    transition: 0.3s;
     box-shadow: 0 0 20px #333;
+    transition: 0.2s;
+    opacity: 0.9;
+}
+#run:hover {
+    background-color: #333;
+    opacity: 1;
+}
+#run:active {
+    box-shadow: 0 10px #666;
+    transform: translateY(4px);
 }
 #multi-btn {
+    background-color: chocolate;
+    transition: 0.2s;
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 50%;
     width: 80px;
-    height: 30px;
+    height: 80px;
+    border: none;
+}
+#multi-btn:hover {
+    background-color: #333;
+    opacity: 0.8;
+}
+#multi-btn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 #auto-click {
+    background-color: chocolate;
+    transition: 0.2s;
+    opacity: 0.8;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
     width: 80px;
-    height: 30px;
+    height: 80px;
+    margin: 20px;
+}
+#auto-click:hover {
+    background-color: #666666;
+    opacity: 1;
+}
+#auto-click:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#bonus {
+    background-color: chocolate;
+    transition: 0.2s;
+    opacity: 0.8;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+#bonus:hover {
+    background-color: #666666;
+    opacity: 1;
+}
+#bonus:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

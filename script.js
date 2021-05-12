@@ -13,7 +13,9 @@ const changNum = document.getElementById('changeNum');
 let num = 1;
 let autoClickCost = 20;
 const autoClick = document.getElementById('auto-price');
-
+const bonusBtn = document.getElementById('bonus');
+let bonusCost = 100;
+const bonus = document.getElementById('bonusCost');
 
 // click button when you click the cookie the score will increase by 1
 button.addEventListener("click", () => {
@@ -53,4 +55,17 @@ if (count >= autoClickCost){
 }
 
 });
+// bonus button increase the score 200% for 30 seconds
 
+
+bonusBtn.addEventListener('click', () => {
+    if (count >= bonusCost) {
+        count = count - bonusCost;
+        bonusCost = bonusCost * multiplier;
+        bonus.innerHTML = bonusCost;
+        window.setInterval(function () {
+            count += increaseByOne * 200;
+            counter.innerHTML = count;
+        }, 3000);
+    }
+})
