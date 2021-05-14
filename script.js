@@ -1,21 +1,24 @@
 // DOM objects
-let count = 0;
+
 const button = document.getElementById('run');
 const counter = document.getElementById('count');
 const button1 = document.getElementById('multi-btn');
-let multiplier = 2;
-let increaseByOne = 1;
-let multipCost = 10;
 const multiplierCost = document.getElementById('multi-cost');
 const autoClickBtn = document.getElementById('auto-click');
 const message = document.getElementById('msg');
 const changNum = document.getElementById('changeNum');
-let num = 1;
-let autoClickCost = 20;
 const autoClick = document.getElementById('auto-price');
 const bonusBtn = document.getElementById('bonus');
-let bonusCost = 100;
 const bonus = document.getElementById('bonusCost');
+const bonusTime = document.getElementById('bonusTime');
+let count = 0;
+let multiplier = 2;
+let increaseByOne = 1;
+let multipCost = 10;
+let num = 1;
+let autoClickCost = 20;
+let bonusCost = 50;
+
 
 // click button when you click the cookie the score will increase by 1
 button.addEventListener("click", () => {
@@ -27,7 +30,7 @@ button.addEventListener("click", () => {
 
 // second button that make the score increase the value of the score
 button1.addEventListener('click',  () => {
-
+        increaseByOne += 1;
     if (count >= multipCost) {
         count += increaseByOne;
         count = count - multipCost;
@@ -59,13 +62,22 @@ if (count >= autoClickCost){
 
 
 bonusBtn.addEventListener('click', () => {
-    if (count >= bonusCost) {
-        count = count - bonusCost;
-        bonusCost = bonusCost * multiplier;
-        bonus.innerHTML = bonusCost;
-        window.setInterval(function () {
-            count += increaseByOne * 200;
-            counter.innerHTML = count;
-        }, 3000);
-    }
+if (count > 50) {
+    count = count - bonusCost;
+    bonusCost = bonusCost * multiplier;
+    bonus.innerHTML = bonusCost;
+    let time = 30;
+    let timeRemain = setInterval(myTimer, 1000);
+     function myTimer () {
+         if (time <= 30) {
+             count = increaseByOne * 200;
+             bonusTime.innerHTML = time;
+             time--;
+         } else if (time <= -1) {
+             clearInterval(timeRemain);
+             bonusTime.innerHTML = 'no time left';
+         }
+     }
+}
+
 })
